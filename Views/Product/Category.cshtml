@@ -3,7 +3,7 @@
     <ul>
         @foreach (Category category in Model)
         {
-            <li><strong>@category.CategoryName </strong>- @category.Description</li>
+            <li class="list-group-item"><a asp-action="Index" asp-route-id="@category.CategoryId"><strong>@category.CategoryName </strong></a>- @category.Description</li>
         }
     </ul>
 </div>

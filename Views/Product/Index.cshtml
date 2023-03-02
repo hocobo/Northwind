@@ -1,0 +1,21 @@
+@model IEnumerable<Product>
+<table class="table">
+    <thread>
+        <tr>
+            <th scope="col">Product Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">In Stock</th>
+        </tr>  
+    </thead>
+    <tbody>
+        @foreach (Product product in Model)
+        {
+        <tr>
+          <td>@product.ProductName</td>
+          <td>$@string.Format("{0:,0.00}",product.UnitPrice)</td>
+          <td>@product.UnitsInStock</td>  
+        </tr> 
+        }
+
+    </tbody>
+</table>
