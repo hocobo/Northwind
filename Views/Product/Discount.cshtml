@@ -1,0 +1,9 @@
+@model IEnumerable<Discount>
+<div>
+    <ul>
+        @foreach(Discount discount in Model)
+        {
+            <li class="list-group-item"><strong>@discount.Title</strong>- @discount.Description</li>
+        }
+    </ul>
+</div>
